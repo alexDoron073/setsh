@@ -1,6 +1,5 @@
 #!/bin/bash
 
-sudo -i
 echo -e "$SUDO_USER\tALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 apt install neofetch
 
