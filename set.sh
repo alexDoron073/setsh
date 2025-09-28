@@ -1,10 +1,12 @@
 #!/bin/bash
 
+# echo "$SUDO_USER"
+
 apt install neofetch
 
 echo -e "$SUDO_USER\tALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
-cp /home/$SUDO_USER/.bashrc $HOME/.bashrc
-
 echo -e "sudo -i\nexit" >> /home/$SUDO_USER/.bashrc
-echo -e "alias clear='clear; neofetch'\nclear" >> $HOME/.bashrc
+
+rm $HOME/.bashrc
+wget https://raw.githubusercontent.com/alexDoron073/setsh/refs/heads/main/.bashrc -P $HOME/
